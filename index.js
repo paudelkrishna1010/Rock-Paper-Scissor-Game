@@ -9,17 +9,21 @@ let userscore = document.getElementById("userscore");
 let compscore = document.getElementById("compscore");
 let uscore = 0;
 let cscore = 0;
+let mvemsg= document.getElementById("cmove");
 
 function scoreupdate() {
   userscore.innerText = uscore;
   compscore.innerText = cscore;
 }
-
+function mveupdtmsg(){
+  mvemsg.innerText=`Computer choosed : ${computerchoice}`;
+}
 rock.addEventListener("click", () => {
   console.log("User clicked on rock");
   computerchoice = compchoicegen();
   userchoice = options[0];
   console.log(`computer choosed ${computerchoice}`);
+  mveupdtmsg();
   gamelogic(userchoice, computerchoice);
 });
 
@@ -28,6 +32,7 @@ paper.addEventListener("click", () => {
   computerchoice = compchoicegen();
   userchoice = options[1];
   console.log(`computer choosed ${computerchoice}`);
+  mveupdtmsg();
   gamelogic(userchoice, computerchoice);
 });
 
@@ -36,6 +41,7 @@ scissor.addEventListener("click", () => {
   computerchoice = compchoicegen();
   userchoice = options[2];
   console.log(`computer choosed ${computerchoice}`);
+  mveupdtmsg();
   gamelogic(userchoice, computerchoice);
 });
 
