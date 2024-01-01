@@ -7,16 +7,32 @@
     height: 5rem;
     background-color: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding-left: 1rem;
+    padding-right: 1rem;
 } 
 .heading{
-    text-align: center;
     font-size: 400%;
+    align-self: center;
+}
+.modebtn{
+    margin-top: 1rem;
+}
+#modebtn{
+    height: 3rem;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 50%;
+}
+#modebtn:hover{
+    opacity: 0.6;
 }
 .options{
     display: flex;
     gap: 2rem;
     justify-content: center;
-    margin-top: 3rem;
+    margin-top: 2rem;
 }
 .choiceimg{
     height: 10rem;
