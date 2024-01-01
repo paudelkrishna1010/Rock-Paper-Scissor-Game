@@ -10,6 +10,8 @@ let compscore = document.getElementById("compscore");
 let uscore = 0;
 let cscore = 0;
 let mvemsg= document.getElementById("cmove");
+let mainbody = document.querySelector("body");
+let dark=false;
 
 function scoreupdate() {
   userscore.innerText = uscore;
@@ -18,6 +20,21 @@ function scoreupdate() {
 function mveupdtmsg(){
   mvemsg.innerText=`Computer choosed : ${computerchoice}`;
 }
+
+function switchmode(){
+  if (dark) {
+    mainbody.style.backgroundColor="#ffffff";
+    mainbody.style.color="#000000";
+    dark=false;
+  }
+  else{
+    mainbody.style.backgroundColor="#1f1f1f";
+    mainbody.style.color="#ffffff";
+    dark=true;
+  }
+
+}
+
 rock.addEventListener("click", () => {
   console.log("User clicked on rock");
   computerchoice = compchoicegen();
